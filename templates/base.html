@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/output.css' %}">
+  <title>Django Blog</title>
+</head>
+<body class="p-0 m-0 box-border">
+  <header class="py-2.5 bg-white border-b-[1px] shadow shadow-black/30 fixed top-0 w-full">
+    <h1 class="ml-3 text-2xl font-bold text-green-800 hover:text-green-600"><a href="{% url 'home' %}">Django Blog</a></h1>
+  </header>
+  <main class="p-3 mt-[55px]">
+    {% block content %}
+    {% endblock content %}
+  </main>
+</body>
+</html>

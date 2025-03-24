@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="post-entry">
+    <p class="mb-2.5"><small>Created By: </small><b class="capitalize">{{ post.author }}</b></p>
+    <h2 class="text-blue-500 font-bold">{{ object.title }}</h2>
+    <p>{{ object.body }}</p>
+  </div>
+
+{% endblock content %}
