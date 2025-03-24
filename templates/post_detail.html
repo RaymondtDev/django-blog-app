@@ -5,7 +5,11 @@
   <div class="post-entry">
     <p class="mb-2.5"><small>Created By: </small><b class="capitalize">{{ post.author }}</b></p>
     <h2 class="text-blue-500 font-bold">{{ object.title }}</h2>
-    <p>{{ object.body }}</p>
+    <p class="pt-3 pb-6">{{ object.body }}</p>
+    <div>
+      <button class="p-2 px-2.5 bg-green-400 rounded text-white hover:scale-105"><a href="{% url 'post_edit' post.pk %}">Edit</a></button>
+      <button class="p-2 bg-red-500 rounded text-white hover:scale-105"><a href="{% url 'post_delete' post.pk %}">Delete</a></button>
+    </div>
   </div>
 
 {% endblock content %}
